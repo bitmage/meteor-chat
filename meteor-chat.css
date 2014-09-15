@@ -1,0 +1,85 @@
+#main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.chatbox {
+  background-color: black;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+
+.history {
+  background-color: gray;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 35px;
+  overflow-y: scroll;
+}
+
+.controls {
+  background-color: blue;
+  position: absolute;
+  padding: 2px;
+  padding-left: 5px;
+  height: 23px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+
+.chat-input {
+  background-color: yellow;
+  width: 100%;
+  max-width: 400px;
+}
+
+span.chat {
+  background-color: yellow;
+  display: block;
+  padding: 2px;
+  padding-left: 7px;
+}
+
+span.chat-author {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+span.chat-message {
+}
+
+.data-preview {
+  background-color: white;
+  position: absolute;
+  z-index: 5000;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+}
+
+.login {
+  padding: 10px;
+  background-color: #AAAAAA;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.unused {
+}
