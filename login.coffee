@@ -19,7 +19,8 @@ root.Login = ReactMeteor.createClass
 
   render: ->
     r.div {className: 'login'}, [
-      r.div {}, 'Hello! Please tell us your name before you join the chat.'
+      r.h2 {}, 'Hello!'
+      r.p {}, 'Please tell us your name before you join the chat.'
       r.input {
         ref: 'loginInput'
         className: 'login-input'

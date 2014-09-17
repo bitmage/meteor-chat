@@ -6,7 +6,6 @@ root.ChatBox = ReactMeteor.createClass
 
   getMeteorState: ->
     history: ChatHistory.find().fetch()
-    message: ''
     debug: Session.get('debug')
     name: Session.get('name')
 
@@ -14,7 +13,19 @@ root.ChatBox = ReactMeteor.createClass
     @setState {message: e.target.value}
 
   sendMessage: ->
-    unless @state.message is ''
+    # toggle debug flag
+    if @state.message is ':debug'
+      Session.set 'debug', (Session.get('debug') isnt true)
+      @setState {message: ''}
+
+    # reset data
+    else if @state.message is ':reset'
+      for {_id} in ChatHistory.find({}).fetch()
+        ChatHistory.remove {_id}
+      @setState {message: ''}
+
+    # normal chat
+    else unless @state.message is ''
       ChatHistory.insert {name: @state.name, message: @state.message}
       @setState {message: ''}, =>
         setTimeout @scrollToBottom, 1 # weird, shouldn't have to do this
@@ -57,7 +68,10 @@ root.ChatBox = ReactMeteor.createClass
           onChange: @setMessage
           value: @state.message
         }
-        r.button {onClick: @sendMessage}, 'Send'
+        r.button {
+          className: 'sendButton'
+          onClick: @sendMessage
+        }, 'Send'
       ]]
 
   componentDidMount: ->

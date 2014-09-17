@@ -10,4 +10,4 @@ if Meteor.isServer
   Meteor.startup ->
 
     # insert history records for testing purposes
-    #ChatHistory.remove {}
+    ChatHistory.remove {}

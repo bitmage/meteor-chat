@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 #main {
   position: absolute;
   top: 0px;
@@ -21,31 +25,35 @@
   top: 5px;
   left: 5px;
   right: 5px;
-  bottom: 35px;
+  bottom: 47px;
   overflow-y: scroll;
 }
 
 .controls {
-  background-color: blue;
+  background-color: rgb(95, 154, 201);
   position: absolute;
   padding: 2px;
   padding-left: 5px;
-  height: 23px;
+  height: 35px;
   left: 5px;
   right: 5px;
   bottom: 5px;
 }
 
 .chat-input {
-  background-color: yellow;
+  background-color: rgb(247, 250, 209);
   width: 100%;
   max-width: 400px;
 }
 
+input, button {
+  font-size: 1.4em;
+}
+
 span.chat {
-  background-color: yellow;
+  background-color: rgb(247, 250, 209);
   display: block;
-  padding: 2px;
+  padding: 5px;
   padding-left: 7px;
 }
 
@@ -56,6 +64,7 @@ span.chat-author {
 }
 
 span.chat-message {
+  padding: 2px;
 }
 
 .data-preview {
@@ -79,7 +88,4 @@ span.chat-message {
   bottom: 0;
   right: 0;
   left: 0;
-}
-
-.unused {
 }
